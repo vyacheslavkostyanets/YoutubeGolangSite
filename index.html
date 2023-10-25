@@ -9,5 +9,23 @@
 <body>
     <h1>Hello World</h1>
     <h1>{{ . }}</h1>
+    <ul>
+        <li>
+            {{.Person.Name}}
+        </li>
+        <li>
+            {{.Person.Age}}
+        </li>
+        <li>
+            {{.Person.Health}}
+        </li>
+    </ul>
+    <ul>
+        {{ range $key, $value := .House }}
+        <li>
+            {{ $key }} 0000000000  {{ $value }}
+        </li>
+        {{ end }}
+    </ul>
 </body>
 </html>
